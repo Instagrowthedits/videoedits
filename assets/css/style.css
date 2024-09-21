@@ -157,6 +157,19 @@ body {
     z-index: 2001;
 }
 
+@media (max-width: 768px) {
+    .slide video.thumbnail {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Adjust height automatically */
+        object-fit: contain; /* Ensure video scales without being cut */
+    }
+
+    .modal-content {
+        width: 100%; /* Full width for modal on mobile */
+        max-width: none;
+    }
+}
+
 
 /* advance vide style */
 
