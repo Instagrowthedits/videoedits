@@ -583,7 +583,7 @@ h1 {
 .clients-container {
     max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden; /* Ensures that overflow is hidden */
+    overflow: hidden; /* Hide overflow to ensure only part of the track is visible */
 }
 
 .clients-slider {
@@ -594,13 +594,12 @@ h1 {
 
 .clients-track {
     display: flex;
-    width: calc(100% * 10); /* Adjust width based on the number of logos, here it assumes 10 logos */
-    animation: clients-scroll 20s linear infinite; /* Animation to slide the logos */
+    animation: clients-scroll 60s linear infinite; /* Slower sliding speed and infinite loop */
 }
 
 .client-logo {
     flex: 0 0 auto;
-    width: 150px; /* Set the width for each logo */
+    width: 150px; /* Set consistent width for each logo */
     padding: 10px;
     box-sizing: border-box;
 }
@@ -616,26 +615,27 @@ h1 {
     filter: grayscale(0%);
 }
 
-/* Keyframes for sliding animation */
+/* Keyframes for infinite sliding animation */
 @keyframes clients-scroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-100%); /* Moves the track to the left */
     }
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     .client-logo {
-        width: 100px; /* Adjust the width for smaller screens */
+        width: 100px; /* Adjust the logo size for mobile */
     }
 
     .clients-track {
-        animation: clients-scroll 30s linear infinite; /* Slow down the animation on smaller screens */
+        animation: clients-scroll 90s linear infinite; /* Slower animation for mobile screens */
     }
 }
+
 
 
 
