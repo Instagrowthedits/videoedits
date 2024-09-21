@@ -1073,13 +1073,13 @@ footer {
     z-index: 2001;
 }
 @media (max-width: 768px) {
-    .slide video.thumbnail-advc_long_vid {
+    .slide-advc_long_vid video.thumbnail-advc_long_vid {
         width: 100%; /* Full width on mobile */
         height: auto; /* Adjust height automatically */
         object-fit: contain; /* Ensure video scales without being cut */
     }
 
-    .modal-content {
+    .modal-content-advc_long_vid {
         width: 100%; /* Full width for modal on mobile */
         max-width: none;
     }
