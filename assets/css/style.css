@@ -580,16 +580,10 @@ h1 {
     text-align: center;
 }
 
-.our-clients-section h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #2c3e50;
-}
-
 .clients-container {
     max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden; /* Ensure container hides overflow */
+    overflow: hidden; /* Ensures that overflow is hidden */
 }
 
 .clients-slider {
@@ -600,20 +594,20 @@ h1 {
 
 .clients-track {
     display: flex;
-    width: calc(100% * 10); /* Width depends on the number of logos */
-    animation: clients-scroll 20s linear infinite; /* Restoring scroll animation */
+    width: calc(100% * 10); /* Adjust width based on the number of logos, here it assumes 10 logos */
+    animation: clients-scroll 20s linear infinite; /* Animation to slide the logos */
 }
 
 .client-logo {
-    flex: 0 0 auto; /* Prevent logos from shrinking or growing */
-    width: 150px; /* Set a fixed width */
+    flex: 0 0 auto;
+    width: 150px; /* Set the width for each logo */
     padding: 10px;
     box-sizing: border-box;
 }
 
 .client-logo img {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: auto;
     filter: grayscale(100%);
     transition: filter 0.3s ease;
 }
@@ -635,11 +629,11 @@ h1 {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .client-logo {
-        width: 100px; /* Smaller width for logos on mobile */
+        width: 100px; /* Adjust the width for smaller screens */
     }
 
     .clients-track {
-        animation: clients-scroll 30s linear infinite; /* Slower for smaller screens */
+        animation: clients-scroll 30s linear infinite; /* Slow down the animation on smaller screens */
     }
 }
 
