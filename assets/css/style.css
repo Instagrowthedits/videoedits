@@ -640,7 +640,10 @@ h1 {
     /* Ensure container is not wider than screen on mobile */
     .clients-container {
         padding: 0 10px;
+                max-width: 600px;
+    margin: 0 auto;
     }
+            
 }
 
 
