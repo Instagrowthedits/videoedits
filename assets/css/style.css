@@ -580,10 +580,15 @@ h1 {
     text-align: center;
 }
 
+.our-clients-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
 .clients-container {
     max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden; /* Hide overflow to ensure only part of the track is visible */
 }
 
 .clients-slider {
@@ -594,19 +599,16 @@ h1 {
 
 .clients-track {
     display: flex;
-    animation: clients-scroll 60s linear infinite; /* Slower sliding speed and infinite loop */
+    animation: clients-scroll 20s linear infinite;
 }
 
 .client-logo {
-    flex: 0 0 auto;
-    width: 150px; /* Set consistent width for each logo */
+    min-width: 200px;
     padding: 10px;
-    box-sizing: border-box;
 }
 
 .client-logo img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
     filter: grayscale(100%);
     transition: filter 0.3s ease;
 }
@@ -615,24 +617,20 @@ h1 {
     filter: grayscale(0%);
 }
 
-/* Keyframes for infinite sliding animation */
+/* Keyframes for sliding animation */
 @keyframes clients-scroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%); /* Moves the track to the left */
+        transform: translateX(-50%);
     }
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .client-logo {
-        width: 100px; /* Adjust the logo size for mobile */
-    }
-
     .clients-track {
-        animation: clients-scroll 90s linear infinite; /* Slower animation for mobile screens */
+        animation: clients-scroll 30s linear infinite; /* Slower for smaller screens */
     }
 }
 
