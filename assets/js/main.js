@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
     var videosAlt = document.querySelectorAll('.thumbnail-alt');
 
     // Loop through each video and set autoplay and muted attributes
-    videosAlt.forEach(video => {
-        video.autoplay = false;
-        video.muted = true;
-        video.play(); // Ensure video starts playing automatically
-    });
+    // videosAlt.forEach(video => {
+    //     video.autoplay = false;
+    //     video.muted = true;
+    //     video.play(); // Ensure video starts playing automatically
+    // });
 });
 
 var currentSlideAlt = 0;
