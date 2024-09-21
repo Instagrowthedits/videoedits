@@ -599,19 +599,19 @@ h1 {
 
 .clients-track {
     display: flex;
-    justify-content: space-around; /* Distribute logos evenly */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: space-between; /* Adjusted to space logos out evenly */
+    flex-wrap: wrap;
 }
 
 .client-logo {
-    min-width: 150px; /* Set minimum width */
-    max-width: 200px; /* Set maximum width */
+    flex: 1 1 150px; /* Allow logos to shrink to a minimum width of 150px */
+    max-width: 150px; /* Set max width to prevent logos from getting too big */
     padding: 10px;
     box-sizing: border-box;
 }
 
 .client-logo img {
-    width: 100%; /* Make image fit within its container */
+    width: 100%; /* Make the logo fit within the defined container size */
     height: auto; /* Maintain aspect ratio */
     filter: grayscale(100%);
     transition: filter 0.3s ease;
@@ -624,14 +624,15 @@ h1 {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .clients-track {
-        justify-content: center; /* Center logos on mobile */
+        justify-content: center; /* Center logos on smaller screens */
     }
 
     .client-logo {
-        min-width: 100px; /* Smaller logos on mobile */
-        max-width: 150px; /* Adjust max width for mobile */
+        flex: 1 1 100px; /* Shrink logos on mobile */
+        max-width: 100px; /* Smaller max-width for mobile */
     }
 }
+
 
 
 
