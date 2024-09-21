@@ -229,11 +229,11 @@ const faqQuestions = document.querySelectorAll(".faq-question");
         var premiumVideos = document.querySelectorAll('.thumbnail-premium');
     
         // Loop through each premium video and set autoplay and muted attributes
-        premiumVideos.forEach(video => {
-            video.autoplay = true;
-            video.muted = true;
-            video.play(); // Ensure premium video starts playing automatically
-        });
+        // premiumVideos.forEach(video => {
+        //     video.autoplay = true;
+        //     video.muted = true;
+        //     video.play(); // Ensure premium video starts playing automatically
+        // });
     });
     
     var currentSlidePremium = 0;
@@ -290,11 +290,11 @@ const faqQuestions = document.querySelectorAll(".faq-question");
     var videos = document.querySelectorAll('.thumbnail-premium_plus');
 
     // Loop through each video and set autoplay and muted attributes
-    videos.forEach(video => {
-        video.autoplay = true;
-        video.muted = true;
-        video.play(); // Ensure video starts playing automatically
-    });
+    // videos.forEach(video => {
+    //     video.autoplay = true;
+    //     video.muted = true;
+    //     video.play(); // Ensure video starts playing automatically
+    // });
 });
 
 var currentSlidePremiumPlus = 0;
@@ -348,11 +348,11 @@ document.addEventListener('DOMContentLoaded', () => {
     var videos = document.querySelectorAll('.thumbnail-advc_long_vid');
 
     // Loop through each video and set autoplay and muted attributes
-    videos.forEach(video => {
-        video.autoplay = true;
-        video.muted = true;
-        video.play(); // Ensure video starts playing automatically
-    });
+    // videos.forEach(video => {
+    //     video.autoplay = true;
+    //     video.muted = true;
+    //     video.play(); // Ensure video starts playing automatically
+    // });
 });
 
 var currentSlideAdvcLongVid = 0;
