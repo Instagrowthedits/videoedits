@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Loop through each video and set autoplay and muted attributes
     videosAlt.forEach(video => {
-        video.autoplay = true;
+        video.autoplay = false;
         video.muted = true;
         video.play(); // Ensure video starts playing automatically
     });
