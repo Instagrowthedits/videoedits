@@ -77,7 +77,7 @@ body {
 }
 
 .slide video.thumbnail {
-    width: 80%;
+    width: 60%;
     height: 90vh; 
     object-fit: cover; 
 }
