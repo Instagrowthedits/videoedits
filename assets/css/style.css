@@ -279,7 +279,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .slide video.thumbnail-alt {
+    .slide-alt video.thumbnail-alt {
         width: 100%; /* Full width on mobile */
         height: auto; /* Adjust height automatically */
         object-fit: contain; /* Ensure video scales without being cut */
