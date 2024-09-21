@@ -632,7 +632,17 @@ h1 {
     .clients-track {
         animation: clients-scroll 30s linear infinite; /* Slower for smaller screens */
     }
+    
+    .client-logo {
+        min-width: 120px; /* Reduce the size of logos on mobile */
+    }
+
+    /* Ensure container is not wider than screen on mobile */
+    .clients-container {
+        padding: 0 10px;
+    }
 }
+
 
 
 
