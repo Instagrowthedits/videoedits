@@ -285,7 +285,7 @@ body {
         object-fit: contain; /* Ensure video scales without being cut */
     }
 
-    .modal-content {
+    .modal-content-alt {
         width: 100%; /* Full width for modal on mobile */
         max-width: none;
     }
