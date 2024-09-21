@@ -605,6 +605,7 @@ h1 {
 .client-logo {
     min-width: 200px;
     padding: 10px;
+    flex-shrink: 0; /* Prevent logos from shrinking */
 }
 
 .client-logo img {
@@ -623,7 +624,7 @@ h1 {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
@@ -632,7 +633,21 @@ h1 {
     .clients-track {
         animation: clients-scroll 30s linear infinite; /* Slower for smaller screens */
     }
+
+    .client-logo {
+        min-width: 150px; /* Smaller logos on mobile */
+    }
+
+    @keyframes clients-scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-200%); /* Ensure full loop on mobile */
+        }
+    }
 }
+
 
 /* faq style */
 
