@@ -77,11 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
     var videos = document.querySelectorAll('.thumbnail');
 
     // Loop through each video and set autoplay and muted attributes
-    videos.forEach(video => {
-        video.autoplay = false;
-        video.muted = true;
-        video.play(); // Ensure video starts playing automatically
-    });
+    // videos.forEach(video => {
+    //     video.autoplay = false;
+    //     video.muted = true;
+    //     video.play(); // Ensure video starts playing automatically
+    // });
 });
     var currentSlide = 0;
 
