@@ -278,6 +278,19 @@ body {
     z-index: 2001;
 }
 
+@media (max-width: 768px) {
+    .slide video.thumbnail-alt {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Adjust height automatically */
+        object-fit: contain; /* Ensure video scales without being cut */
+    }
+
+    .modal-content {
+        width: 100%; /* Full width for modal on mobile */
+        max-width: none;
+    }
+}
+
 
 /* nav baar css */
 
@@ -830,6 +843,19 @@ footer {
     z-index: 2001;
 }
 
+@media (max-width: 768px) {
+    .slide video.thumbnail-premium {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Adjust height automatically */
+        object-fit: contain; /* Ensure video scales without being cut */
+    }
+
+    .modal-content {
+        width: 100%; /* Full width for modal on mobile */
+        max-width: none;
+    }
+}
+
 /* premime plus style */
 .slider-container-premium_plus {
     position: relative;
@@ -931,6 +957,18 @@ footer {
     font-weight: bold;
     cursor: pointer;
     z-index: 2001;
+}
+@media (max-width: 768px) {
+    .slide video.thumbnail-premium_plus {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Adjust height automatically */
+        object-fit: contain; /* Ensure video scales without being cut */
+    }
+
+    .modal-content {
+        width: 100%; /* Full width for modal on mobile */
+        max-width: none;
+    }
 }
 
 .slider-container-advc_long_vid {
@@ -1034,6 +1072,18 @@ footer {
     cursor: pointer;
     z-index: 2001;
 }
+@media (max-width: 768px) {
+    .slide video.thumbnail-advc_long_vid {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Adjust height automatically */
+        object-fit: contain; /* Ensure video scales without being cut */
+    }
+
+    .modal-content {
+        width: 100%; /* Full width for modal on mobile */
+        max-width: none;
+    }
+}
 
 /* Premium Long Video Slider */
 .premium_lng_vid-slider-container {
@@ -1136,6 +1186,19 @@ footer {
     font-weight: bold;
     cursor: pointer;
     z-index: 2001;
+}
+
+@media (max-width: 768px) {
+    .slide video.premium_lng_vid-thumbnail {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Adjust height automatically */
+        object-fit: contain; /* Ensure video scales without being cut */
+    }
+
+    .modal-content {
+        width: 100%; /* Full width for modal on mobile */
+        max-width: none;
+    }
 }
 
 
