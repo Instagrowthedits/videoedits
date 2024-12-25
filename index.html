@@ -34,6 +34,90 @@
             
         }
     }
+/*             gallary section css */
+             .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed; /* Ensures it stays fixed relative to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure it's above other elements on the page */
+}
+
+.popup img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  z-index: 1001; /* Higher than popup background */
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10000; /* Ensure it's on top of everything */
+}
+
+.popup .prev,
+.popup .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1002; /* Ensure navigation buttons are above popup content */
+}
+
+.popup .prev {
+  left: 20px;
+}
+
+.popup .next {
+  right: 20px;
+}
     </style>
       
 
@@ -343,6 +427,49 @@
         </video>
     </div>
 </div>
+      <!-- reel cover section -->
+<h1 style="margin: 25px; text-align: center;">
+    <span style="color: navy;">Explore Exclusive</span>
+    <span class="features"><h2>Reel Cover Design Services!</h2></span>
+  </h1>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="assets/img/desk-img/design-instagram-reels-thumbnail-help-to-grow-up-your-account.jpg" alt="Image 1" onclick="openPopup(0)">
+    </div>
+    <div class="gallery-item">
+      <img src="assets/img/desk-img/design-you-3-youtube-thumbnails.jpeg" alt="Image 2" onclick="openPopup(1)">
+    </div>
+    <div class="gallery-item">
+      <img src="assets/img/desk-img/design-a-professional-instagram-reel-cover-thumbnail (1).jpeg" alt="Image 3" onclick="openPopup(2)">
+    </div>
+    <div class="gallery-item">
+      <img src="assets/img/desk-img/design-2-professional-amazing-youtube-thumbnail-in-2hr.jpg" alt="Image 4" onclick="openPopup(3)">
+    </div>
+    <div class="gallery-item">
+        <img src="assets/img/desk-img/design-catchy-youtube-thumbnail.jpg" alt="Image 4" onclick="openPopup(4)">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/img/desk-img/design-a-professional-instagram-reel-cover-thumbnail.png" alt="Image 4" onclick="openPopup(5)">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/img/desk-img/design-a-mind-blowing-youtube-thumbnail-for-you.jpg" alt="Image 4" onclick="openPopup(6)">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/img/desk-img/design-attractive-instagram-reels-cover-thumbnail-image.jpeg" alt="Image 4" onclick="openPopup(7)">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/img/desk-img/design-a-professional-instagram-reel-cover-thumbnail.jpeg" alt="Image 4" onclick="openPopup(8)">
+      </div>
+  </div>
+
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <img id="popup-image" src="" alt="Popup Image">
+    <button class="prev" onclick="prevImage()">&#10094;</button>
+    <button class="next" onclick="nextImage()">&#10095;</button>
+  </div>
+ <!-- reel cover section end -->
 <!-- price list -->
 
 <h1 style="margin: 25px; text-align: center;">
@@ -612,6 +739,48 @@
                   autoplaySpeed: 2000,
             });
       });
+</script>
+<script>
+    let images = [];
+let currentIndex = 0;
+
+// Collect all image sources from the gallery
+document.querySelectorAll(".gallery-item img").forEach((img) => {
+  images.push(img.src);
+});
+
+// Open the popup
+function openPopup(index) {
+  currentIndex = index;
+  const popup = document.getElementById("popup");
+  const popupImage = document.getElementById("popup-image");
+  popupImage.src = images[currentIndex];
+  popup.style.display = "flex";
+}
+
+// Close the popup
+function closePopup() {
+  const popup = document.getElementById("popup");
+  popup.style.display = "none";
+}
+
+// Show the next image
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  document.getElementById("popup-image").src = images[currentIndex];
+}
+
+// Show the previous image
+function prevImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  document.getElementById("popup-image").src = images[currentIndex];
+}
+
+// Attach click events to gallery images
+document.querySelectorAll(".gallery-item img").forEach((img, index) => {
+  img.addEventListener("click", () => openPopup(index));
+});
+
 </script>
 <script src="assets/js/main.js?v=0.1"></script>
 
